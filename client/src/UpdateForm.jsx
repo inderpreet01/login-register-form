@@ -3,13 +3,13 @@ import axios from 'axios';
 import { useState } from 'react';
 
 const UpdateForm = () => {
-  const [username, setUsername] = useState('');
+  const [email, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put('http://localhost:5000/api/users/update', {
-        username,
+      const response = await axios.put('http://localhost:3000/update', {
+        email,
         password,
       });
       console.log(response.data);
@@ -22,9 +22,9 @@ const UpdateForm = () => {
     <div>
       <h2>Update</h2>
       <input 
-      type="text"
-        placeholder="Username"
-        value={username}
+      type="text" 
+        placeholder="email"
+        value={email}
         onChange={(e) => setUsername(e.target.value)}
       />
       <input
