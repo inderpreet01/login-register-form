@@ -6,7 +6,7 @@ import UpdateForm from "./UpdateForm"
 const Home = () => {
   return (
     <div>
-      Hey I am Home Component
+     heyy i m home
       <UpdateForm/>
       <DeleteForm/>
     </div>
